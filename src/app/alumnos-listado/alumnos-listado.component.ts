@@ -9,6 +9,8 @@ export class AlumnosListadoComponent implements OnChanges, OnInit, OnDestroy {
   
   @Input() maximoAlumnos: number = 5;
   @Output() enviarNotas: EventEmitter<string> = new EventEmitter();
+  
+  valorMontoAlumno = 100;
 
   constructor() { 
     console.log('constructor');
