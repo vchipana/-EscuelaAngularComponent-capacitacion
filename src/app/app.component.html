@@ -1,0 +1,20 @@
+<div class="container">
+  Hola {{ title }}
+
+  <h1>Alumnos</h1>
+  <button 
+    type="button" 
+    class="btn btn-primary" 
+    (click)="verAlumnos = !verAlumnos">Cerrar alumnos</button>
+    
+  <button 
+    type="button" 
+    class="btn btn-success" 
+    (click)="maximoAlumnos = maximoAlumnos + 1">Alumnos +1</button>
+
+  <app-alumnos-listado 
+    *ngIf="verAlumnos === true"
+    [maximoAlumnos]="maximoAlumnos"
+    (enviarNotas)="confirmarEnvio($event)"
+  ></app-alumnos-listado>
+</div>
